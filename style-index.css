@@ -1,6 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
@@ -12,14 +12,13 @@
 
     /* COLORS */
     /* Main Color*/
-    --hue-color: 0;
-    /*(RED) */
+    --hue-color: 340;
 
-    --first-color: hsl(0, 69%, 51%);
+    --first-color: hsl(var(--hue-color), 69%, 51%);
     --first-color-second: hsl(var(--hue-color), 69%, 51%);
     --first-color-alt: hsl(var(--hue-color), 34%, 12%);
     --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
-    --title-color: hsl(var(--hue-color), 8%, 15%);
+    --title-color: hsl(var(--hue-color), 92%, 14%);
     --text-color: hsl(var(--hue-color), 8%, 45%);
     --text-color-light: hsl(var(--hue-color), 8%, 65%);
     --input-color: hsl(var(--hue-color), 70%, 96%);
@@ -27,7 +26,7 @@
     --container-color: aliceblue;
 
     /* FONT & TYPOGRAAPHY */
-    --body-font: 'Roboto', sans-serif;
+    --body-font: 'Roboto Condensed', sans-serif;
 
     --big-font-size: 2rem;
     --h1-font-size: 1.5rem;
@@ -175,7 +174,7 @@ img {
 }
 
 .nav-list {
-    grid-template-columns: repeat(3 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
@@ -188,15 +187,15 @@ img {
     font-weight: var(--font-medium);
 }
 
-.nav-item:hover{
+.nav-item:hover {
     color: var(--first-color);
 }
 
-.nav-icon{
+.nav-icon {
     font-size: 1.2rem;
 }
 
-.nav-close{
+.nav-close {
     position: absolute;
     right: 1.3rem;
     bottom: .5rem;
@@ -206,7 +205,159 @@ img {
 }
 
 
-.nav-close:hover{
+.nav-close:hover {
     color: var(--first-color-alt);
 }
+
 /* SHOW MENU */
+.show-menu {
+    bottom: 0;
+}
+
+.home-container {
+    gap: 1rem;
+}
+
+.home-content {
+    grid-template-columns: .5fr 3fr;
+    padding-top: 3.5rem;
+    align-items: center;
+}
+
+.home-social {
+    display: grid;
+    grid-template-columns: max-content;
+    row-gap: 1rem;
+}
+
+.home-social-icon {
+    font-size: 1.25rem;
+    color: var(--first-color);
+}
+
+.home-social-icon:hover {
+    color: var(--first-color-alt);
+}
+
+.home-blob {
+    width: 300px;
+    fill: var(--first-color);
+}
+
+.home-blob-img {
+    width: 150px;
+}
+
+.home-data {
+    grid-column: 1/3;
+}
+
+.home-title {
+    font-size: var(--big-font-size);
+    margin-bottom: var(--mb-0-75);
+}
+
+.home-subtitle {
+    font-size: var(--h3-font-size);
+    color: var(--text-color);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-0-75);
+}
+
+.home-description {
+    margin-bottom: var(--mb-2);
+}
+
+.home-scroll {
+    display: none;
+}
+
+.home-scroll-button {
+    color: var(--first-color);
+    transition: .3s;
+}
+
+.home-scroll-button:hover {
+    transform: translateY(.25rem);
+}
+
+.home-scroll-mouse {
+    font-size: 2rem;
+}
+
+.home-scroll-name {
+    font-size: var(--small-font-size);
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    margin-right: var(--mb-0-25);
+}
+
+.home-scroll-arrow {
+    font-size: 1.25rem;
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--first-color);
+    color: aliceblue;
+    padding: 1rem;
+    border-radius: .5rem;
+    font-weight: var(--font-medium);
+}
+
+.button:hover {
+    background-color: var(--first-color-alt);
+}
+
+.button-icon {
+    font-size: 1.25rem;
+    margin-left: var(--mb-0-5);
+    transition: .3s;
+}
+
+.button-flex {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* ABOUT */
+.about-img {
+    width: 200px;
+    border-radius: .5rem;
+    justify-self: center;
+    align-self: center;
+}
+
+.about-description {
+    text-align: center;
+    margin-bottom: var(--mb-2-5);
+}
+
+.about-info {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: var(--mb-2-5);
+}
+
+.about-info-title {
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+}
+
+.about-info-name {
+    font-size: var(--smaller-font-size);
+}
+
+.about-info-title,
+.about-info-name {
+    display: block;
+    text-align: center;
+}
+
+/* SKILLS */
+
+
+/* QUALIFICATION */
+
+/* SERVICES */
