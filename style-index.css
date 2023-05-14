@@ -130,7 +130,7 @@ img {
     background-color: var(--body-color);
 }
 
-/* NAV */
+/* ==========================   NAV ============================== */
 .nav {
     max-width: 968px;
     height: var(--header-height);
@@ -320,7 +320,7 @@ img {
     align-items: center;
 }
 
-/* ABOUT */
+/* ==========================   ABOUT  ============================== */
 .about-img {
     width: 200px;
     border-radius: .5rem;
@@ -481,6 +481,79 @@ img {
     transform: rotate(-180deg);
 }
 
-/* QUALIFICATION */
+/* ==========================   QUALIFICATION  ============================== */
 
-/* SERVICES */
+.qualification-tabs {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: var(--mb-2);
+}
+
+.qualification-button {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    cursor: pointer;
+}
+
+.qualification-buttton:hover {
+    color: var(--first-color);
+}
+
+.qualification-icon {
+    font-size: 1.8rem;
+    margin-right: var(--mb-0-25);
+}
+
+.qualification-data {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    column-gap: 1.5rem;
+}
+
+.qualification-title {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+}
+
+.qualification-subtitle {
+    display: inline-block;
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-1);
+}
+
+.qualification-calendar {
+    font-size: var(--smaller-font-size);
+    color: var(--text-color-light);
+}
+
+.qualification-rounder {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-color: var(--first-color);
+    border-radius: 50%;
+}
+
+.qualification-line {
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: var(--first-color);
+    transform: translate(6px, -7px);
+}
+
+.qualification [data-content] {
+    display: none;
+}
+
+.qualification-active[data-content] {
+    display: block;
+}
+
+.qualification-button.qualification-active{
+    color: var(--first-color);
+}
+
+/* ==========================   SERVICES ============================== */
+
+

@@ -3,21 +3,21 @@ const navMenu = document.getElementById('nav-menu'),
     navClose = document.getElementById('nav-close')
 
 
-// DISPLAY THE MENU
+// ==============================  DISPLAY THE MENU ============================== 
 if (navToggle) {
     navToggle.addEventListener('click', () => {
         navMenu.classList.add('show-menu')
     })
 }
 
-// CLOSE THE MENU
+// ==============================  CLOSE THE MENU ============================== 
 if (navClose) {
     navClose.addEventListener('click', () => {
         navMenu.classList.remove('show-menu')
     })
 }
 
-// REMOVE MENU MOBILE WHEN AN INDIVIDUAL NAV-ITEM IS CLICKED
+// ==============================  REMOVE MENU MOBILE WHEN AN INDIVIDUAL NAV-ITEM IS CLICKED ============================== //
 const navItem = document.querySelectorAll('.nav-item')
 
 function linkAction() {
@@ -27,7 +27,7 @@ function linkAction() {
 }
 navItem.forEach(n => n.addEventListener('click', linkAction))
 
-// SKILLS SECTION 
+// ======================= SKILLS SECTION ============================== //
 const skillsContent = document.getElementsByClassName('skills-content'),
     skillsHeader = document.querySelectorAll('.skills-header')
 
@@ -44,4 +44,25 @@ function toggleSkills() {
 
 skillsHeader.forEach((el) => {
     el.addEventListener('click', toggleSkills)
+})
+
+//  ============================== QUALIFICATION TABS ============================== //
+const tabs = document.querySelectorAll('[data-target'),
+    tabcontents = document.querySelectorAll('[data-content]')
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', () =>{
+        const target = document.querySelector(tab.dataset.target)
+
+        tabcontents.forEach(tabcontent =>{
+            tabcontent.classList.remove('qualification-active')
+        })
+        target.classList.add('qualification-active')
+
+        tabs.forEach(tab=>{
+            tab.classList.remove('qualification-active')
+        })
+
+        tabs.classList.add('qualification-active')
+    })
 })
