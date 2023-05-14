@@ -51,18 +51,41 @@ const tabs = document.querySelectorAll('[data-target'),
     tabcontents = document.querySelectorAll('[data-content]')
 
 tabs.forEach(tab => {
-    tab.addEventListener('click', () =>{
+    tab.addEventListener('click', () => {
         const target = document.querySelector(tab.dataset.target)
 
-        tabcontents.forEach(tabcontent =>{
+        tabcontents.forEach(tabcontent => {
             tabcontent.classList.remove('qualification-active')
         })
         target.classList.add('qualification-active')
 
-        tabs.forEach(tab=>{
+        tabs.forEach(tab => {
             tab.classList.remove('qualification-active')
         })
 
         tabs.classList.add('qualification-active')
+    })
+})
+
+//  ============================== SERVICES ============================== //
+const modalViews = document.querySelectorAll('.services-modal'),
+    modalBtns = document.querySelectorAll('.services-button'),
+    modalCloses = document.querySelectorAll('.services-modal-close')
+
+let modal = function (modalClick) {
+    modalViews[modalClick].classList.add('active-modal')
+}
+
+modalBtns.forEach((modalBtn, i) => {
+    modalBtn.addEventListener('click', () => {
+        modal(i)
+    })
+})
+
+modalCloses.forEach((modalClose) => {
+    modalClose.addEventListener('click', () => {
+        modalViews.forEach((modalView) => {
+            modalView.classList.remove('active-modal')
+        })
     })
 })
