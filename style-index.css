@@ -578,7 +578,8 @@ img {
 }
 
 .qualification-button.qualification_active {
-    color: black;
+    color: var(--first-color);
+    
 }
 
 /* ==========================   SERVICES ============================== */
