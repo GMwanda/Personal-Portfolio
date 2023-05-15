@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
 
 * {
     text-decoration: none;
@@ -12,7 +12,7 @@
 
     /* COLORS */
     /* Main Color*/
-    --hue-color: 340;
+    --hue-color: 0;
 
     --first-color: hsl(var(--hue-color), 69%, 51%);
     --first-color-second: hsl(var(--hue-color), 69%, 51%);
@@ -26,15 +26,15 @@
     --container-color: aliceblue;
 
     /* FONT & TYPOGRAAPHY */
-    --body-font: 'Roboto Condensed', sans-serif;
+    --body-font: 'Nunito', sans-serif;
 
     --big-font-size: 2rem;
     --h1-font-size: 1.5rem;
     --h2-font-size: 1.25rem;
-    --h3-font-size: 1.125rem;
-    --normal-font-size: .938rem;
-    --small-font-size: .813rem;
-    --smaller-font-size: .75rem;
+    --h3-font-size: 1.155rem;
+    --normal-font-size: 1.066rem;
+    --small-font-size: .960rem;
+    --smaller-font-size: .890rem;
 
     --font-medium: 500;
     --font-semi-bold: 600;
@@ -579,7 +579,7 @@ img {
 
 .qualification-button.qualification_active {
     color: var(--first-color);
-    
+
 }
 
 /* ==========================   SERVICES ============================== */
