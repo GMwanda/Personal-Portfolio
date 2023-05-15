@@ -47,7 +47,7 @@ skillsHeader.forEach((el) => {
 })
 
 //  ============================== QUALIFICATION TABS ============================== //
-const tabs = document.querySelectorAll('[data-target'),
+const tabs = document.querySelectorAll('[data-target]'),
     tabcontents = document.querySelectorAll('[data-content]')
 
 tabs.forEach(tab => {
@@ -55,15 +55,15 @@ tabs.forEach(tab => {
         const target = document.querySelector(tab.dataset.target)
 
         tabcontents.forEach(tabcontent => {
-            tabcontent.classList.remove('qualification-active')
+            tabcontent.classList.remove('qualification_active')
         })
-        target.classList.add('qualification-active')
+        target.classList.add('qualification_active');
 
         tabs.forEach(tab => {
-            tab.classList.remove('qualification-active')
+            tab.classList.remove('qualification_active')
         })
 
-        tabs.classList.add('qualification-active')
+        tabs.classList.add('qualification_active')
     })
 })
 
@@ -91,16 +91,34 @@ modalCloses.forEach((modalClose) => {
 })
 
 //  ============================== SWIPPER JS ============================== //
-let swiper = new Swiper(".portfolio-container", {
+let swiperPortfolio = new Swiper(".portfolio-container", {
     cssMode: true,
-    loop: true, 
+    loop: true,
 
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
     pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+        el: ".swiper-pagination",
+        clickable: true,
     },
-  });
+});
+
+//  ============================== SWIPPER JS ============================== //
+let swiperTestimonal = new Swiper(".testimonal-container", {
+    grabCursor: true,
+    loop: true,
+    spaceBetween: 48,
+
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
+    },
+    breakoints: {
+        568: {
+            slidesPerView: 2,
+        }
+    }
+});
