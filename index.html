@@ -9,7 +9,6 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!------------------------- SWIPER CSS ------------------------->
-    =
     <link rel="stylesheet" href="swiper-bundle.min.css">
     <!------------------------- BOXICONS IMPORT ------------------------->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -28,7 +27,7 @@
                 <ul class="nav-list grid">
                     <!------------------------- HOME ------------------------->
                     <li class="nav-item">
-                        <a href="#home" class="nav-item">
+                        <a href="#home" class="nav-item active-link">
                             <i class='bx bxs-home nav-icon nav-icon'></i>Home
                         </a>
                     </li>
@@ -67,6 +66,9 @@
             </div>
 
             <div class="nav-btns">
+                <!-- THEME CHANGE BTN -->
+                <i class='bx bxs-moon change-theme' id="theme-button"></i>
+
                 <div class="nav-toggle" id="nav-toggle">
                     <i class='bx bx-grid-alt'></i>
                 </div>
@@ -846,7 +848,9 @@
         </div>
     </footer>
     <!------------------------- SCROLL TOP ------------------------->
-
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class='bx bx-up-arrow-alt scrollup-icon'></i>
+    </a>
     <!------------------------- SWIPER JS------------------------->
     <script src="swiper-bundle.min.js"></script>
     <!------------------------- MAIN JS------------------------->
